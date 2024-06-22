@@ -15,5 +15,13 @@
     "typescript": "^5.4.5",
     "vitest": "1.5.0",
     "wrangler": "^3.60.3"
+  },
+  "dependencies": {
+    "@langchain/anthropic": "^0.2.2",
+    "@langchain/google-genai": "^0.0.21",
+    "@langchain/openai": "^0.2.0",
+    "hono": "^4.4.7",
+    "langchain": "^0.2.6",
+    "langsmith": "^0.1.32"
   }
 }
