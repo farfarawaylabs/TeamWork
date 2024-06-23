@@ -20,7 +20,7 @@ app.post('/run', async (c) => {
 });
 
 app.post('/copywriters', async (c) => {
-	const body: GeneralTeamJob = await c.req.json();
+	const body: { task: string } = await c.req.json();
 
 	const response = await runTeam(
 		body.task,
@@ -42,12 +42,12 @@ app.post('/copywriters', async (c) => {
 });
 
 app.post('/coders', async (c) => {
-	const body: GeneralTeamJob = await c.req.json();
+	const body: { task: string } = await c.req.json();
 
 	const response = await runTeam(
 		body.task,
 		{
-			teamType: TeamTypes.CopyWriters,
+			teamType: TeamTypes.Coders,
 			teamLeader: {
 				type: 'OPENAI',
 			},
